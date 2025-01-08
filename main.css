@@ -1,0 +1,83 @@
+button {
+  /*   background-color:white; */
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  transition: transform 0.1s ease;
+  /*   animation: theme-container 4s linear infinite; */
+}
+.circle-button {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /*   background:radial-gradient(circle,#f9f9f9, #e0e0e0); */
+  background: linear-gradient(to bottom, black 50%, white 50%);
+  /*   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.2),inset 5px 5px 10px rgba(0, 0, 0, 0.2);  */
+  cursor: grab;
+  transform-origin: center;
+  transition: transform 0.1s ease;
+  /*   animation: rotate-left 4s linear infinite; */
+  /* , theme-circle 4s linear infinite;*/
+}
+.circle-dot {
+  color: blue;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  position: relative;
+  /*   left:5px;
+      top:50%; */
+}
+.rotate {
+  transform: rotate(180deg);
+}
+
+@keyframes rotate-left {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes theme-container {
+  0% {
+    background: white;
+    color: black;
+  }
+  50% {
+    background: black;
+    color: white;
+  }
+  100% {
+    background: white;
+  }
+}
+
+.circle-container {
+  background-color: black;
+  color: white;
+}
+
+#icon {
+  padding: 10px;
+  color: black;
+}
+#icon1 {
+  padding: 10px;
+  color: white;
+}

@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="circle-container">
+      <button class="circle-button">
+        <div class="fas fa-moon icon moon" id="icon1"></div>
+        <div class="fas fa-sun icon sun" id="icon"></div>
+      </button>
+    </div>
+    <script>
+      const div = document.querySelector(".circle-button");
+      const parentdiv = document.querySelector(".circle-container");
+
+      let isLightTheme = true;
+      div.addEventListener("click", () => {
+        let color = isLightTheme ? "white" : "black";
+        let iconColor = !isLightTheme ? "white" : "black";
+        div.classList.toggle("rotate");
+        parentdiv.style.backgroundColor = color;
+        isLightTheme = !isLightTheme;
+      });
+    </script>
+  </body>
+</html>
